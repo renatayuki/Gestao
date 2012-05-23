@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  descricao: MyString
+  data: 2012-05-16 11:08:43
+  medico_id: 1
+  prontuario_id: 1
+
+two:
+  descricao: MyString
+  data: 2012-05-16 11:08:43
+  medico_id: 1
+  prontuario_id: 1

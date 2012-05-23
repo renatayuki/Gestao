@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  prontuario_id: 1
+  resultado: MyString
+  nome: MyString
+  dataRealizacao: 2012-05-16 11:10:57
+  dataPronto: 2012-05-16 11:10:57
+  status: MyString
+
+two:
+  prontuario_id: 1
+  resultado: MyString
+  nome: MyString
+  dataRealizacao: 2012-05-16 11:10:57
+  dataPronto: 2012-05-16 11:10:57
+  status: MyString

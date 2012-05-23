@@ -1,0 +1,39 @@
+<h1>Listing prontuarios</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Datanascimento</th>
+    <th>Localizacaogeo</th>
+    <th>Cadastrosaude</th>
+    <th>Habitovida</th>
+    <th>Telefoneresidencial</th>
+    <th>Celular</th>
+    <th>Email</th>
+    <th>Genero</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prontuarios.each do |prontuario| %>
+  <tr>
+    <td><%= prontuario.nome %></td>
+    <td><%= prontuario.dataNascimento %></td>
+    <td><%= prontuario.localizacaoGeo %></td>
+    <td><%= prontuario.cadastroSaude %></td>
+    <td><%= prontuario.habitoVida %></td>
+    <td><%= prontuario.telefoneResidencial %></td>
+    <td><%= prontuario.celular %></td>
+    <td><%= prontuario.email %></td>
+    <td><%= prontuario.genero.nome %></td>
+    <td><%= link_to 'Show', prontuario %></td>
+    <td><%= link_to 'Edit', edit_prontuario_path(prontuario) %></td>
+    <td><%= link_to 'Destroy', prontuario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prontuario', new_prontuario_path %>

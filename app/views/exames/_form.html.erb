@@ -1,0 +1,43 @@
+<%= form_for(@exame) do |f| %>
+  <% if @exame.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@exame.errors.count, "error") %> prohibited this exame from being saved:</h2>
+
+      <ul>
+      <% @exame.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :resultado %><br />
+    <%= f.text_area :resultado %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :dataRealizacao %><br />
+    <%= f.date_select :dataRealizacao %>
+  </div>
+  <div class="field">
+    <%= f.label :dataPronto %><br />
+    <%= f.date_select :dataPronto %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= f.label :paciente %><br />
+    <%= collection_select (:exame, :prontuario_id, Prontuario.all, :id, :nome)  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

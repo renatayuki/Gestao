@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  data: 2012-05-16 11:09:47
+  medico_id: 1
+  prontuario_id: 1
+  nome: MyString
+  restricao: MyString
+  recomendacao: MyString
+  deveAnalizar: false
+
+two:
+  data: 2012-05-16 11:09:47
+  medico_id: 1
+  prontuario_id: 1
+  nome: MyString
+  restricao: MyString
+  recomendacao: MyString
+  deveAnalizar: false

@@ -1,0 +1,37 @@
+<h1>Listing receita</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Medicamento</th>
+    <th>Dosagem</th>
+    <th>Frequencia</th>
+    <th>Duracao</th>
+    <th>Observacao</th>
+    <th>Medico</th>
+    <th>Prontuario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receita.each do |receitum| %>
+  <tr>
+    <td><%= receitum.data %></td>
+    <td><%= receitum.medicamento %></td>
+    <td><%= receitum.dosagem %></td>
+    <td><%= receitum.frequencia %></td>
+    <td><%= receitum.duracao %></td>
+    <td><%= receitum.observacao %></td>
+    <td><%= receitum.medico_id %></td>
+    <td><%= receitum.prontuario_id %></td>
+    <td><%= link_to 'Show', receitum %></td>
+    <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
+    <td><%= link_to 'Destroy', receitum, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receitum', new_receitum_path %>

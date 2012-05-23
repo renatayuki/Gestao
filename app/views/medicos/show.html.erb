@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Login:</b>
+  <%= @medico.login %>
+</p>
+
+<p>
+  <b>Senha:</b>
+  <%= @medico.senha %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @medico.nome %>
+</p>
+
+<p>
+  <b>Datanascimento:</b>
+  <%= @medico.dataNascimento %>
+</p>
+
+<p>
+  <b>Rg:</b>
+  <%= @medico.rg %>
+</p>
+
+<p>
+  <b>Localizacaogeo:</b>
+  <%= @medico.localizacaoGeo %>
+</p>
+
+<p>
+  <b>Cpf:</b>
+  <%= @medico.cpf %>
+</p>
+
+<p>
+  <b>Crm:</b>
+  <%= @medico.crm %>
+</p>
+
+<p>
+  <b>Telefoneresidencial:</b>
+  <%= @medico.telefoneResidencial %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @medico.celular %>
+</p>
+
+<p>
+  <b>Especialidade:</b>
+  <%= @medico.especialidade_id %>
+</p>
+
+<p>
+  <b>Admin:</b>
+  <%= @medico.admin %>
+</p>
+
+
+<%= link_to 'Edit', edit_medico_path(@medico) %> |
+<%= link_to 'Back', medicos_path %>

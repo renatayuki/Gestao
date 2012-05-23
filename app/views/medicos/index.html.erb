@@ -1,0 +1,45 @@
+<h1>Listing medicos</h1>
+
+<table>
+  <tr>
+    <th>Login</th>
+    <th>Senha</th>
+    <th>Nome</th>
+    <th>Datanascimento</th>
+    <th>Rg</th>
+    <th>Localizacaogeo</th>
+    <th>Cpf</th>
+    <th>Crm</th>
+    <th>Telefoneresidencial</th>
+    <th>Celular</th>
+    <th>Especialidade</th>
+    <th>Admin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @medicos.each do |medico| %>
+  <tr>
+    <td><%= medico.login %></td>
+    <td><%= medico.senha %></td>
+    <td><%= medico.nome %></td>
+    <td><%= medico.dataNascimento %></td>
+    <td><%= medico.rg %></td>
+    <td><%= medico.localizacaoGeo %></td>
+    <td><%= medico.cpf %></td>
+    <td><%= medico.crm %></td>
+    <td><%= medico.telefoneResidencial %></td>
+    <td><%= medico.celular %></td>
+    <td><%= medico.especialidade_id %></td>
+    <td><%= medico.admin %></td>
+    <td><%= link_to 'Show', medico %></td>
+    <td><%= link_to 'Edit', edit_medico_path(medico) %></td>
+    <td><%= link_to 'Destroy', medico, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Medico', new_medico_path %>

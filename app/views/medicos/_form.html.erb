@@ -1,0 +1,65 @@
+<%= form_for(@medico) do |f| %>
+  <% if @medico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@medico.errors.count, "error") %> prohibited this medico from being saved:</h2>
+
+      <ul>
+      <% @medico.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :senha %><br />
+    <%= f.text_field :senha %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :dataNascimento %><br />
+    <%= f.date_select :dataNascimento %>
+  </div>
+  <div class="field">
+    <%= f.label :rg %><br />
+    <%= f.number_field :rg %>
+  </div>
+  <div class="field">
+    <%= f.label :localizacaoGeo %><br />
+    <%= f.number_field :localizacaoGeo %>
+  </div>
+  <div class="field">
+    <%= f.label :cpf %><br />
+    <%= f.number_field :cpf %>
+  </div>
+  <div class="field">
+    <%= f.label :crm %><br />
+    <%= f.number_field :crm %>
+  </div>
+  <div class="field">
+    <%= f.label :telefoneResidencial %><br />
+    <%= f.number_field :telefoneResidencial %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br />
+    <%= f.number_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :especialidade_id %><br />
+    <%= f.number_field :especialidade_id %>
+  </div>
+  <div class="field">
+    <%= f.label :admin %><br />
+    <%= f.check_box :admin %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

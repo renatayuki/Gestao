@@ -1,0 +1,34 @@
+<h1>Gestão de Atendimento</h1>
+
+<div class="search">
+	Search <br />
+	<%= render :partial => 'search' %>
+</div>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Data Nascimento</th>
+    <th>Localizacao Geo</th>
+    <th>Cadastro Saude</th>
+    <th>Habito Vida</th>
+    <th>Telefone Residencial</th>
+    <th>Telefone Celular</th>
+    <th>E-mail</th>
+    <th>Genero</th>
+  </tr>
+
+<% @prontuarios.each do |prontuario| %>
+  	<tr>
+	    <td><%= link_to prontuario.nome, prontuario %></td>
+	    <td><%= prontuario.dataNascimento %></td>
+	    <td><%= prontuario.localizacaoGeo %></td>
+	    <td><%= prontuario.cadastroSaude %></td>
+	    <td><%= prontuario.habitoVida %></td>
+	    <td><%= prontuario.telefoneResidencial %></td>
+	    <td><%= prontuario.celular %></td>
+	    <td><%= prontuario.email %></td>
+	    <td><%= prontuario.genero.nome %></td>
+	</tr>
+<% end %>
+</table>

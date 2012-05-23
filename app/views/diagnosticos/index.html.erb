@@ -1,0 +1,29 @@
+<h1>Listing diagnosticos</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th>Data</th>
+    <th>Medico</th>
+    <th>Prontuario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diagnosticos.each do |diagnostico| %>
+  <tr>
+    <td><%= diagnostico.descricao %></td>
+    <td><%= diagnostico.data %></td>
+    <td><%= diagnostico.medico_id %></td>
+    <td><%= diagnostico.prontuario_id %></td>
+    <td><%= link_to 'Show', diagnostico %></td>
+    <td><%= link_to 'Edit', edit_diagnostico_path(diagnostico) %></td>
+    <td><%= link_to 'Destroy', diagnostico, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diagnostico', new_diagnostico_path %>

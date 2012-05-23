@@ -1,0 +1,53 @@
+<%= form_for(@prontuario) do |f| %>
+  <% if @prontuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@prontuario.errors.count, "error") %> prohibited this prontuario from being saved:</h2>
+
+      <ul>
+      <% @prontuario.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :dataNascimento %><br />
+    <%= f.date_select :dataNascimento, :start_year => 1900 %>
+  </div>
+  <div class="field">
+    <%= f.label :localizacaoGeo %><br />
+    <%= f.text_field :localizacaoGeo %>
+  </div>
+  <div class="field">
+    <%= f.label :cadastroSaude %><br />
+    <%= f.text_field :cadastroSaude %>
+  </div>
+  <div class="field">
+    <%= f.label :habitoVida %><br />
+    <%= f.text_field :habitoVida %>
+  </div>
+  <div class="field">
+    <%= f.label :telefoneResidencial %><br />
+    <%= f.telephone_field :telefoneResidencial %>
+  </div>
+  <div class="field">
+    <%= f.label :celular %><br />
+    <%= f.telephone_field :celular %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :genero %><br />
+    <%= collection_select (:prontuario, :genero_id, Genero.all, :id, :nome)  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  login: MyString
+  senha: MyString
+  nome: MyString
+  dataNascimento: 2012-05-23
+  rg: 1
+  localizacaoGeo: 1
+  cpf: 1
+  crm: 1
+  telefoneResidencial: 1
+  celular: 1
+  especialidade_id: 1
+  admin: false
+
+two:
+  login: MyString
+  senha: MyString
+  nome: MyString
+  dataNascimento: 2012-05-23
+  rg: 1
+  localizacaoGeo: 1
+  cpf: 1
+  crm: 1
+  telefoneResidencial: 1
+  celular: 1
+  especialidade_id: 1
+  admin: false

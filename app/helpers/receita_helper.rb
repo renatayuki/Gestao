@@ -1,0 +1,2 @@
+module ReceitaHelper
+end

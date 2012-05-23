@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @prontuario.nome %>
+</p>
+
+<p>
+  <b>Datanascimento:</b>
+  <%= @prontuario.dataNascimento %>
+</p>
+
+<p>
+  <b>Localizacaogeo:</b>
+  <%= @prontuario.localizacaoGeo %>
+</p>
+
+<p>
+  <b>Cadastrosaude:</b>
+  <%= @prontuario.cadastroSaude %>
+</p>
+
+<p>
+  <b>Habitovida:</b>
+  <%= @prontuario.habitoVida %>
+</p>
+
+<p>
+  <b>Telefoneresidencial:</b>
+  <%= @prontuario.telefoneResidencial %>
+</p>
+
+<p>
+  <b>Celular:</b>
+  <%= @prontuario.celular %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @prontuario.email %>
+</p>
+
+<p>
+  <b>Genero:</b>
+  <%= @prontuario.genero_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_prontuario_path(@prontuario) %> |
+<%= link_to 'Back', prontuarios_path %>

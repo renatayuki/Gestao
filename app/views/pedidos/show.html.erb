@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @pedido.data %>
+</p>
+
+<p>
+  <b>Medico:</b>
+  <%= @pedido.medico_id %>
+</p>
+
+<p>
+  <b>Prontuario:</b>
+  <%= @pedido.prontuario_id %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @pedido.nome %>
+</p>
+
+<p>
+  <b>Restricao:</b>
+  <%= @pedido.restricao %>
+</p>
+
+<p>
+  <b>Recomendacao:</b>
+  <%= @pedido.recomendacao %>
+</p>
+
+<p>
+  <b>Deveanalizar:</b>
+  <%= @pedido.deveAnalizar %>
+</p>
+
+
+<%= link_to 'Edit', edit_pedido_path(@pedido) %> |
+<%= link_to 'Back', pedidos_path %>

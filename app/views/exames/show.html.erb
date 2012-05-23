@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Prontuario:</b>
+  <%= @exame.prontuario_id %>
+</p>
+
+<p>
+  <b>Resultado:</b>
+  <%= @exame.resultado %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @exame.nome %>
+</p>
+
+<p>
+  <b>Datarealizacao:</b>
+  <%= @exame.dataRealizacao %>
+</p>
+
+<p>
+  <b>Datapronto:</b>
+  <%= @exame.dataPronto %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @exame.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_exame_path(@exame) %> |
+<%= link_to 'Back', exames_path %>
